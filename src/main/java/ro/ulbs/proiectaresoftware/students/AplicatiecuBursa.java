@@ -33,7 +33,7 @@ public class AplicatieCuBursa {
     public List<StudentBursier> sorteaza(List<StudentBursier> lst) {
 
         lst.sort(Comparator
-                .comparing(StudentBursier::getFormatieDeStudiu)
+                .comparing(StudentBursier::getFormatiedeStudiu)
                 .thenComparing(StudentBursier::getNume)
                 .thenComparing(StudentBursier::getPrenume)
                 .thenComparing(StudentBursier::getNota)
