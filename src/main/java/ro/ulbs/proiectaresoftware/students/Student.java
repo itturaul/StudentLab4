@@ -50,3 +50,28 @@ public class Student {
     }
 }
 
+package ro.proiectaresoftware;
+
+public final class Student {
+    private final String nume;
+    private final int id;
+
+    public Student(String nume, int id) {
+        this.nume = nume;
+        this.id = id;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Student: " + nume + " (ID: " + id + ")";
+    }
+}
+
