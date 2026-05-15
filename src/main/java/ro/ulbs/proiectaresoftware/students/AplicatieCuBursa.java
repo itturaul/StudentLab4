@@ -1,3 +1,7 @@
+package ro.ulbs.proiectaresoftware.students;
+
+import ro.ulbs.proiectaresoftware.students.StudentBursier;
+
 import java.util.*;
 
 public class AplicatieCuBursa {
@@ -33,11 +37,11 @@ public class AplicatieCuBursa {
     public List<StudentBursier> sorteaza(List<StudentBursier> lst) {
 
         lst.sort(Comparator
-                .comparing(StudentBursier::getFormatiedeStudiu)
+                .comparing(StudentBursier::getFormatieDeStudiu)
                 .thenComparing(StudentBursier::getNume)
                 .thenComparing(StudentBursier::getPrenume)
                 .thenComparing(StudentBursier::getNota)
-                .thenComparing(StudentBursier::getCuantumBursa)
+                .thenComparing(StudentBursier::getBursa)
         );
 
         return lst;

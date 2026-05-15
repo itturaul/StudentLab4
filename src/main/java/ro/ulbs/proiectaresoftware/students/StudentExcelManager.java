@@ -15,9 +15,9 @@ public class StudentExcelManager {
         String fileName = "laborator8_students.xlsx";
 
         List<Student> listaInitiala = new ArrayList<>();
-        listaInitiala.add(new Student(101, "Ion", "Popescu", "311AC"));
-        listaInitiala.add(new Student(102, "Maria", "Ionescu", "312AC"));
-        listaInitiala.add(new Student(103, "Andrei", "Vasile", "311AC"));
+        listaInitiala.add(new Student(101, "Ion", "Popescu", "311AC", 0.0));
+        listaInitiala.add(new Student(102, "Maria", "Ionescu", "312AC", 0.0));
+        listaInitiala.add(new Student(103, "Andrei", "Vasile", "311AC", 0.0));
 
         exportStudentsToExcel(listaInitiala, fileName);
 
@@ -26,7 +26,6 @@ public class StudentExcelManager {
 
         listaCitita.forEach(System.out::println);
     }
-    -
     public static void exportStudentsToExcel(List<Student> studenti, String filePath) {
         try (Workbook workbook = new XSSFWorkbook()) {
             Sheet sheet = workbook.createSheet("Studenti");
@@ -73,7 +72,7 @@ public class StudentExcelManager {
                 String nume = row.getCell(2).getStringCellValue();
                 String formatie = row.getCell(3).getStringCellValue();
 
-                listaStudenti.add(new Student(matricol, prenume, nume, formatie));
+                listaStudenti.add(new Student(matricol, prenume, nume, formatie, 0.0));
             }
 
         } catch (Exception e) {

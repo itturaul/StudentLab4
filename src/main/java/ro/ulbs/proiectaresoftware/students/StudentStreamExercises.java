@@ -31,7 +31,7 @@ public class StudentStreamExercises {
         List<Student> listaModificata = studentiCuNote.stream()
                 .map(s -> {
                     if (s.getNota() < 4) {
-                        return new Student(s.getNumarMatricol(), s.getPrenume(), s.getNume(), s.getFormatieDeStudiu(), 4.0);
+                        return new Student(s.getNrMatricol(), s.getPrenume(), s.getNume(), s.getFormatieDeStudiu(), 4.0);
                     }
                     return s;
                 })

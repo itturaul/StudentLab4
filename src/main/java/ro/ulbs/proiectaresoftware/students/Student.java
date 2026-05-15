@@ -10,20 +10,24 @@ public class Student {
     private String grupa;
     private double nota;
 
-    public Student(int nrMatricol, String nume, String prenume, String grupa) {
+    public Student(int nrMatricol, String nume, String prenume, String grupa, double nota) {
         this.nrMatricol = nrMatricol;
         this.nume = nume;
         this.prenume = prenume;
         this.grupa = grupa;
+        this.nota = nota;
     }
 
     public void setNota(double nota) {
         this.nota = nota;
     }
-
+    public double getNota() {return nota;}
     public int getNrMatricol() {
         return nrMatricol;
     }
+    public String getFormatieDeStudiu() {return grupa;}
+    public String getNume() {return nume;}
+    public String getPrenume() {return prenume;}
 
     @Override
     public boolean equals(Object o) {
