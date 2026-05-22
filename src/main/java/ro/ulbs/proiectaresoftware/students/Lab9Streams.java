@@ -11,6 +11,7 @@ public class Lab9Streams {
                 .boxed()
                 .collect(Collectors.toList());
 
+
         System.out.println("Lista inițială: " + numereAleatoare);
         System.out.println("----------------------------------------");
 
